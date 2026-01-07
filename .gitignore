@@ -1,0 +1,27 @@
+# Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+*.opensdf
+*.sdf
+*.cache
+*.db
+*.opendsb
+*.pub
+
+# Compiled Object files
+*/bin/
+*/obj/
+*.dll
+*.exe
+*.pdb
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# Temporary files
+*.log
+*.tmp
