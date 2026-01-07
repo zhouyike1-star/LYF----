@@ -49,7 +49,8 @@ namespace WindowsFormsMap1
                 int nameIdx = _feature.Fields.FindField("名称");
                 if (nameIdx != -1)
                 {
-                    this.Text = "非遗详情: " + _feature.get_Value(nameIdx).ToString();
+                    object val = _feature.get_Value(nameIdx);
+                    this.Text = "非遗详情: " + (val == null ? "" : val.ToString());
                 }
             }
             catch (Exception ex)

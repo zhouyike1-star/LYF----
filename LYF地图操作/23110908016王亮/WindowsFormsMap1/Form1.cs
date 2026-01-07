@@ -56,10 +56,36 @@ namespace WindowsFormsMap1
             // 4. 加载默认演示数据
             LoadDefaultMxd();
 
+            // [Member D] Data Self-Check
+            InitDataModule();
+
+            // [Member D] UI Button for Health Report
+            ToolStripMenuItem itemHealth = new ToolStripMenuItem("数据体检");
+            itemHealth.Click += (s, ev) => CheckDataHealthUI();
+            menuStrip1.Items.Add(itemHealth);
+
+            // [Member D] Advanced Features
+            ToolStripMenuItem itemImport = new ToolStripMenuItem("数据入库(GDB)");
+            itemImport.Click += (s, ev) => ImportDataUI();
+            menuStrip1.Items.Add(itemImport);
+
+            ToolStripMenuItem itemExport = new ToolStripMenuItem("导出统计(.csv)");
+            itemExport.Click += (s, ev) => ExportStatsUI();
+            menuStrip1.Items.Add(itemExport);
+
+            ToolStripMenuItem itemBackup = new ToolStripMenuItem("数据备份(Backup)");
+            itemBackup.Click += (s, ev) => BackupDataUI();
+            menuStrip1.Items.Add(itemBackup);
+
             // [Member B Integration Fix]
             // Ensure app starts on Data View (Index 0). 
             // This prevents starting on Visual Tab without triggering the layout initialization logic.
             this.tabControl1.SelectedIndex = 0;
+        }
+
+        private void BackupDataUI()
+        {
+            throw new NotImplementedException();
         }
 
         private void LoadDefaultMxd()

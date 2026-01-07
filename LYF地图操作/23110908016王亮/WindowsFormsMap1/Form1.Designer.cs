@@ -31,22 +31,21 @@ namespace WindowsFormsMap1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据加载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.加载地图文档ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.加载sho数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemAddXYData = new System.Windows.Forms.ToolStripMenuItem();
-            this.查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemInitData = new System.Windows.Forms.ToolStripMenuItem();
             this.itemCheckDataQuality = new System.Windows.Forms.ToolStripMenuItem();
             this.itemDisplaceCoordinates = new System.Windows.Forms.ToolStripMenuItem();
+            this.查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.地图量测ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAreaMeasure = new System.Windows.Forms.ToolStripMenuItem();
             this.面积量测ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.漫游ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清除选择集ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.刷新至初始视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.漫游ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMapping = new System.Windows.Forms.ToolStripMenuItem();
             this.itemSymbolize = new System.Windows.Forms.ToolStripMenuItem();
             this.itemExport = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +67,7 @@ namespace WindowsFormsMap1
             this.toolStripSeparatorEdit = new System.Windows.Forms.ToolStripSeparator();
             this.itemCreateFeature = new System.Windows.Forms.ToolStripMenuItem();
             this.itemUndo = new System.Windows.Forms.ToolStripMenuItem();
+            this.刷新至初始视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitter1 = new System.Windows.Forms.Splitter();
@@ -78,18 +78,18 @@ namespace WindowsFormsMap1
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPageVisual = new System.Windows.Forms.TabPage();
             this.axPageLayoutControl1 = new ESRI.ArcGIS.Controls.AxPageLayoutControl();
-            this.axMapControlVisual = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.tabPageVisual = new System.Windows.Forms.TabPage();
             this.panelVisualHeader = new System.Windows.Forms.Panel();
-            this.txtVisualSearch = new System.Windows.Forms.TextBox();
-            this.btnVisualSearch = new System.Windows.Forms.Button();
-            this.btnBackToPro = new System.Windows.Forms.Button();
-            this.btnVisualPan = new System.Windows.Forms.Button();
-            this.btnVisualZoomIn = new System.Windows.Forms.Button();
-            this.btnVisualZoomOut = new System.Windows.Forms.Button();
-            this.btnVisualFull = new System.Windows.Forms.Button();
             this.btnVisualSync = new System.Windows.Forms.Button();
+            this.btnVisualFull = new System.Windows.Forms.Button();
+            this.btnVisualZoomOut = new System.Windows.Forms.Button();
+            this.btnVisualZoomIn = new System.Windows.Forms.Button();
+            this.btnVisualPan = new System.Windows.Forms.Button();
+            this.btnBackToPro = new System.Windows.Forms.Button();
+            this.btnVisualSearch = new System.Windows.Forms.Button();
+            this.txtVisualSearch = new System.Windows.Forms.TextBox();
+            this.axMapControlVisual = new ESRI.ArcGIS.Controls.AxMapControl();
             this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -99,15 +99,16 @@ namespace WindowsFormsMap1
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axPageLayoutControl1)).BeginInit();
             this.tabPageVisual.SuspendLayout();
             this.panelVisualHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axPageLayoutControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axMapControlVisual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.数据加载ToolStripMenuItem,
@@ -122,8 +123,8 @@ namespace WindowsFormsMap1
             this.menuEditing});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1108, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1662, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,74 +140,67 @@ namespace WindowsFormsMap1
             this.查询ToolStripMenuItem,
             this.另存为ToolStripMenuItem});
             this.数据加载ToolStripMenuItem.Name = "数据加载ToolStripMenuItem";
-            this.数据加载ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.数据加载ToolStripMenuItem.Size = new System.Drawing.Size(98, 30);
             this.数据加载ToolStripMenuItem.Text = "数据加载";
             // 
             // 加载地图文档ToolStripMenuItem
             // 
             this.加载地图文档ToolStripMenuItem.Name = "加载地图文档ToolStripMenuItem";
-            this.加载地图文档ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.加载地图文档ToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
             this.加载地图文档ToolStripMenuItem.Text = "加载地图文档";
             this.加载地图文档ToolStripMenuItem.Click += new System.EventHandler(this.加载地图文档ToolStripMenuItem_Click);
             // 
             // 加载sho数据ToolStripMenuItem
             // 
             this.加载sho数据ToolStripMenuItem.Name = "加载sho数据ToolStripMenuItem";
-            this.加载sho数据ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.加载sho数据ToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
             this.加载sho数据ToolStripMenuItem.Text = "加载shp数据";
             this.加载sho数据ToolStripMenuItem.Click += new System.EventHandler(this.加载shp数据ToolStripMenuItem_Click);
             // 
             // itemAddXYData
             // 
             this.itemAddXYData.Name = "itemAddXYData";
-            this.itemAddXYData.Size = new System.Drawing.Size(148, 22);
+            this.itemAddXYData.Size = new System.Drawing.Size(272, 34);
             this.itemAddXYData.Text = "添加XY数据";
             this.itemAddXYData.Click += new System.EventHandler(this.ItemAddXYData_Click);
             // 
-            // 查询ToolStripMenuItem
-            // 
-            this.查询ToolStripMenuItem.Name = "查询ToolStripMenuItem";
-            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.查询ToolStripMenuItem.Text = "查询";
-            this.查询ToolStripMenuItem.Click += new System.EventHandler(this.查询ToolStripMenuItem_Click);
-            // 
-            // 另存为ToolStripMenuItem
-            // 
-            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.另存为ToolStripMenuItem.Text = "另存为";
-            this.另存为ToolStripMenuItem.Click += new System.EventHandler(this.另存为ToolStripMenuItem_Click);
-            // 
             // itemInitData
             // 
-            this.itemInitData.Name = "itemInitData";
-            this.itemInitData.Size = new System.Drawing.Size(180, 22);
-            this.itemInitData.Text = "一键初始化非遗数据";
             this.itemInitData.ForeColor = System.Drawing.Color.DarkRed;
+            this.itemInitData.Name = "itemInitData";
+            this.itemInitData.Size = new System.Drawing.Size(272, 34);
+            this.itemInitData.Text = "一键初始化非遗数据";
             this.itemInitData.Click += new System.EventHandler(this.ItemInitData_Click);
             // 
             // itemCheckDataQuality
             // 
-            this.itemCheckDataQuality.Name = "itemCheckDataQuality";
-            this.itemCheckDataQuality.Size = new System.Drawing.Size(180, 22);
-            this.itemCheckDataQuality.Text = "检查数据质量";
             this.itemCheckDataQuality.ForeColor = System.Drawing.Color.DarkBlue;
+            this.itemCheckDataQuality.Name = "itemCheckDataQuality";
+            this.itemCheckDataQuality.Size = new System.Drawing.Size(272, 34);
+            this.itemCheckDataQuality.Text = "检查数据质量";
             this.itemCheckDataQuality.Click += new System.EventHandler(this.ItemCheckDataQuality_Click);
             // 
             // itemDisplaceCoordinates
             // 
             this.itemDisplaceCoordinates.ForeColor = System.Drawing.Color.DarkGreen;
             this.itemDisplaceCoordinates.Name = "itemDisplaceCoordinates";
-            this.itemDisplaceCoordinates.Size = new System.Drawing.Size(180, 22);
+            this.itemDisplaceCoordinates.Size = new System.Drawing.Size(272, 34);
             this.itemDisplaceCoordinates.Text = "离散化处理点位";
             this.itemDisplaceCoordinates.Click += new System.EventHandler(this.ItemDisplaceCoordinates_Click);
             // 
-            // 刷新ToolStripMenuItem
+            // 查询ToolStripMenuItem
             // 
-            this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
-            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.刷新ToolStripMenuItem.Text = "刷新";
-            this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
+            this.查询ToolStripMenuItem.Name = "查询ToolStripMenuItem";
+            this.查询ToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
+            this.查询ToolStripMenuItem.Text = "查询";
+            this.查询ToolStripMenuItem.Click += new System.EventHandler(this.查询ToolStripMenuItem_Click);
+            // 
+            // 另存为ToolStripMenuItem
+            // 
+            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
+            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
+            this.另存为ToolStripMenuItem.Text = "另存为";
+            this.另存为ToolStripMenuItem.Click += new System.EventHandler(this.另存为ToolStripMenuItem_Click);
             // 
             // 地图量测ToolStripMenuItem
             // 
@@ -214,45 +208,41 @@ namespace WindowsFormsMap1
             this.tsmiAreaMeasure,
             this.面积量测ToolStripMenuItem});
             this.地图量测ToolStripMenuItem.Name = "地图量测ToolStripMenuItem";
-            this.地图量测ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.地图量测ToolStripMenuItem.Size = new System.Drawing.Size(98, 30);
             this.地图量测ToolStripMenuItem.Text = "地图量测";
             // 
             // tsmiAreaMeasure
             // 
             this.tsmiAreaMeasure.Name = "tsmiAreaMeasure";
-            this.tsmiAreaMeasure.Size = new System.Drawing.Size(128, 22);
+            this.tsmiAreaMeasure.Size = new System.Drawing.Size(187, 34);
             this.tsmiAreaMeasure.Text = " 距离测量";
             this.tsmiAreaMeasure.Click += new System.EventHandler(this.距离量测ToolStripMenuItem_Click);
             // 
             // 面积量测ToolStripMenuItem
             // 
             this.面积量测ToolStripMenuItem.Name = "面积量测ToolStripMenuItem";
-            this.面积量测ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.面积量测ToolStripMenuItem.Size = new System.Drawing.Size(187, 34);
             this.面积量测ToolStripMenuItem.Text = "面积量测";
             this.面积量测ToolStripMenuItem.Click += new System.EventHandler(this.面积量测ToolStripMenuItem_Click);
             // 
-
-
-
+            // 刷新ToolStripMenuItem
+            // 
+            this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(62, 30);
+            this.刷新ToolStripMenuItem.Text = "刷新";
+            this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
             // 
             // 清除选择集ToolStripMenuItem
             // 
             this.清除选择集ToolStripMenuItem.Name = "清除选择集ToolStripMenuItem";
-            this.清除选择集ToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.清除选择集ToolStripMenuItem.Size = new System.Drawing.Size(98, 30);
             this.清除选择集ToolStripMenuItem.Text = "清除选择";
             this.清除选择集ToolStripMenuItem.Click += new System.EventHandler(this.清除选择集ToolStripMenuItem_Click);
-            // 
-            // 刷新至初始视图ToolStripMenuItem
-            // 
-            this.刷新至初始视图ToolStripMenuItem.Name = "刷新至初始视图ToolStripMenuItem";
-            this.刷新至初始视图ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.刷新至初始视图ToolStripMenuItem.Text = "全图显示";
-            this.刷新至初始视图ToolStripMenuItem.Click += new System.EventHandler(this.刷新至初始视图ToolStripMenuItem_Click);
             // 
             // 漫游ToolStripMenuItem
             // 
             this.漫游ToolStripMenuItem.Name = "漫游ToolStripMenuItem";
-            this.漫游ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.漫游ToolStripMenuItem.Size = new System.Drawing.Size(62, 30);
             this.漫游ToolStripMenuItem.Text = "漫游";
             this.漫游ToolStripMenuItem.Click += new System.EventHandler(this.漫游ToolStripMenuItem_Click);
             // 
@@ -263,14 +253,27 @@ namespace WindowsFormsMap1
             this.itemExport,
             this.itemLabel});
             this.menuMapping.Name = "menuMapping";
-            this.menuMapping.Size = new System.Drawing.Size(68, 21);
+            this.menuMapping.Size = new System.Drawing.Size(98, 30);
             this.menuMapping.Text = "地图制图";
             // 
+            // itemSymbolize
+            // 
+            this.itemSymbolize.Name = "itemSymbolize";
+            this.itemSymbolize.Size = new System.Drawing.Size(182, 34);
+            this.itemSymbolize.Text = "符号化";
+            this.itemSymbolize.Click += new System.EventHandler(this.ItemSymbolize_Click);
+            // 
+            // itemExport
+            // 
+            this.itemExport.Name = "itemExport";
+            this.itemExport.Size = new System.Drawing.Size(182, 34);
+            this.itemExport.Text = "导出地图";
+            this.itemExport.Click += new System.EventHandler(this.ItemExport_Click);
             // 
             // itemLabel
             // 
             this.itemLabel.Name = "itemLabel";
-            this.itemLabel.Size = new System.Drawing.Size(173, 22);
+            this.itemLabel.Size = new System.Drawing.Size(182, 34);
             this.itemLabel.Text = "动态标注";
             this.itemLabel.Click += new System.EventHandler(this.动态标注ToolStripMenuItem_Click);
             // 
@@ -280,20 +283,20 @@ namespace WindowsFormsMap1
             this.itemDataQuery,
             this.itemSpatialQuery});
             this.menuQuery.Name = "menuQuery";
-            this.menuQuery.Size = new System.Drawing.Size(68, 21);
+            this.menuQuery.Size = new System.Drawing.Size(98, 30);
             this.menuQuery.Text = "查询统计";
             // 
             // itemDataQuery
             // 
             this.itemDataQuery.Name = "itemDataQuery";
-            this.itemDataQuery.Size = new System.Drawing.Size(124, 22);
+            this.itemDataQuery.Size = new System.Drawing.Size(182, 34);
             this.itemDataQuery.Text = "属性查询";
             this.itemDataQuery.Click += new System.EventHandler(this.ItemDataQuery_Click);
             // 
             // itemSpatialQuery
             // 
             this.itemSpatialQuery.Name = "itemSpatialQuery";
-            this.itemSpatialQuery.Size = new System.Drawing.Size(124, 22);
+            this.itemSpatialQuery.Size = new System.Drawing.Size(182, 34);
             this.itemSpatialQuery.Text = "空间查询";
             this.itemSpatialQuery.Click += new System.EventHandler(this.空间查询ToolStripMenuItem_Click);
             // 
@@ -303,20 +306,20 @@ namespace WindowsFormsMap1
             this.itemBuffer,
             this.itemOverlay});
             this.menuAnalysis.Name = "menuAnalysis";
-            this.menuAnalysis.Size = new System.Drawing.Size(68, 21);
+            this.menuAnalysis.Size = new System.Drawing.Size(98, 30);
             this.menuAnalysis.Text = "空间分析";
             // 
             // itemBuffer
             // 
             this.itemBuffer.Name = "itemBuffer";
-            this.itemBuffer.Size = new System.Drawing.Size(136, 22);
+            this.itemBuffer.Size = new System.Drawing.Size(200, 34);
             this.itemBuffer.Text = "缓冲区分析";
             this.itemBuffer.Click += new System.EventHandler(this.ItemBuffer_Click);
             // 
             // itemOverlay
             // 
             this.itemOverlay.Name = "itemOverlay";
-            this.itemOverlay.Size = new System.Drawing.Size(136, 22);
+            this.itemOverlay.Size = new System.Drawing.Size(200, 34);
             this.itemOverlay.Text = "叠置分析";
             this.itemOverlay.Click += new System.EventHandler(this.ItemOverlay_Click);
             // 
@@ -327,27 +330,27 @@ namespace WindowsFormsMap1
             this.itemScaleBar,
             this.itemLegend});
             this.menuLayout.Name = "menuLayout";
-            this.menuLayout.Size = new System.Drawing.Size(68, 21);
+            this.menuLayout.Size = new System.Drawing.Size(98, 30);
             this.menuLayout.Text = "版面设计";
             // 
             // itemNorthArrow
             // 
             this.itemNorthArrow.Name = "itemNorthArrow";
-            this.itemNorthArrow.Size = new System.Drawing.Size(136, 22);
+            this.itemNorthArrow.Size = new System.Drawing.Size(200, 34);
             this.itemNorthArrow.Text = "添加指北针";
             this.itemNorthArrow.Click += new System.EventHandler(this.ItemAddNorthArrow_Click);
             // 
             // itemScaleBar
             // 
             this.itemScaleBar.Name = "itemScaleBar";
-            this.itemScaleBar.Size = new System.Drawing.Size(136, 22);
+            this.itemScaleBar.Size = new System.Drawing.Size(200, 34);
             this.itemScaleBar.Text = "添加比例尺";
             this.itemScaleBar.Click += new System.EventHandler(this.ItemAddScaleBar_Click);
             // 
             // itemLegend
             // 
             this.itemLegend.Name = "itemLegend";
-            this.itemLegend.Size = new System.Drawing.Size(136, 22);
+            this.itemLegend.Size = new System.Drawing.Size(200, 34);
             this.itemLegend.Text = "添加图例";
             this.itemLegend.Click += new System.EventHandler(this.ItemAddLegend_Click);
             // 
@@ -361,39 +364,39 @@ namespace WindowsFormsMap1
             this.itemCreateFeature,
             this.itemUndo});
             this.menuEditing.Name = "menuEditing";
-            this.menuEditing.Size = new System.Drawing.Size(92, 21);
+            this.menuEditing.Size = new System.Drawing.Size(134, 30);
             this.menuEditing.Text = "空间数据编辑";
             // 
             // itemStartEdit
             // 
             this.itemStartEdit.Name = "itemStartEdit";
-            this.itemStartEdit.Size = new System.Drawing.Size(144, 22);
+            this.itemStartEdit.Size = new System.Drawing.Size(211, 34);
             this.itemStartEdit.Text = "开始编辑";
             this.itemStartEdit.Click += new System.EventHandler(this.ItemStartEdit_Click);
             // 
             // itemSaveEdit
             // 
             this.itemSaveEdit.Name = "itemSaveEdit";
-            this.itemSaveEdit.Size = new System.Drawing.Size(144, 22);
+            this.itemSaveEdit.Size = new System.Drawing.Size(211, 34);
             this.itemSaveEdit.Text = "保存编辑";
             this.itemSaveEdit.Click += new System.EventHandler(this.ItemSaveEdit_Click);
             // 
             // itemStopEdit
             // 
             this.itemStopEdit.Name = "itemStopEdit";
-            this.itemStopEdit.Size = new System.Drawing.Size(144, 22);
+            this.itemStopEdit.Size = new System.Drawing.Size(211, 34);
             this.itemStopEdit.Text = "结束编辑";
             this.itemStopEdit.Click += new System.EventHandler(this.ItemStopEdit_Click);
             // 
             // toolStripSeparatorEdit
             // 
             this.toolStripSeparatorEdit.Name = "toolStripSeparatorEdit";
-            this.toolStripSeparatorEdit.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparatorEdit.Size = new System.Drawing.Size(208, 6);
             // 
             // itemCreateFeature
             // 
             this.itemCreateFeature.Name = "itemCreateFeature";
-            this.itemCreateFeature.Size = new System.Drawing.Size(144, 22);
+            this.itemCreateFeature.Size = new System.Drawing.Size(211, 34);
             this.itemCreateFeature.Text = "创建要素";
             this.itemCreateFeature.Click += new System.EventHandler(this.ItemCreateFeature_Click);
             // 
@@ -401,64 +404,67 @@ namespace WindowsFormsMap1
             // 
             this.itemUndo.Name = "itemUndo";
             this.itemUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.itemUndo.Size = new System.Drawing.Size(144, 22);
+            this.itemUndo.Size = new System.Drawing.Size(211, 34);
             this.itemUndo.Text = "撤销";
             this.itemUndo.Click += new System.EventHandler(this.ItemUndo_Click);
+            // 
+            // 刷新至初始视图ToolStripMenuItem
+            // 
+            this.刷新至初始视图ToolStripMenuItem.Name = "刷新至初始视图ToolStripMenuItem";
+            this.刷新至初始视图ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.刷新至初始视图ToolStripMenuItem.Text = "全图显示";
+            this.刷新至初始视图ToolStripMenuItem.Click += new System.EventHandler(this.刷新至初始视图ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 507);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 763);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 9, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1108, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1662, 31);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(100, 24);
             this.toolStripStatusLabel1.Text = "当前坐标：";
             // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 25);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(2);
+            this.splitter1.Location = new System.Drawing.Point(0, 36);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(2, 482);
+            this.splitter1.Size = new System.Drawing.Size(3, 727);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(359, 25);
-            this.splitter2.Margin = new System.Windows.Forms.Padding(2);
+            this.splitter2.Location = new System.Drawing.Point(539, 36);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(7, 482);
+            this.splitter2.Size = new System.Drawing.Size(10, 727);
             this.splitter2.TabIndex = 6;
             this.splitter2.TabStop = false;
             // 
             // axTOCControl2
             // 
             this.axTOCControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.axTOCControl2.Location = new System.Drawing.Point(2, 25);
-            this.axTOCControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.axTOCControl2.Location = new System.Drawing.Point(3, 36);
             this.axTOCControl2.Name = "axTOCControl2";
             this.axTOCControl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl2.OcxState")));
-            this.axTOCControl2.Size = new System.Drawing.Size(357, 482);
+            this.axTOCControl2.Size = new System.Drawing.Size(536, 727);
             this.axTOCControl2.TabIndex = 5;
             // 
             // axMapControl2
             // 
             this.axMapControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axMapControl2.Location = new System.Drawing.Point(3, 3);
-            this.axMapControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.axMapControl2.Location = new System.Drawing.Point(4, 4);
             this.axMapControl2.Name = "axMapControl2";
             this.axMapControl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl2.OcxState")));
-            this.axMapControl2.Size = new System.Drawing.Size(728, 450);
+            this.axMapControl2.Size = new System.Drawing.Size(1097, 687);
             this.axMapControl2.TabIndex = 7;
             this.axMapControl2.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl2_OnMouseDown);
             this.axMapControl2.OnMouseMove += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseMoveEventHandler(this.axMapControl1_OnMouseMove);
@@ -468,7 +474,6 @@ namespace WindowsFormsMap1
             // 
             this.axLicenseControl3.Enabled = true;
             this.axLicenseControl3.Location = new System.Drawing.Point(441, 384);
-            this.axLicenseControl3.Margin = new System.Windows.Forms.Padding(2);
             this.axLicenseControl3.Name = "axLicenseControl3";
             this.axLicenseControl3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl3.OcxState")));
             this.axLicenseControl3.Size = new System.Drawing.Size(32, 32);
@@ -480,19 +485,21 @@ namespace WindowsFormsMap1
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPageVisual);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(366, 25);
+            this.tabControl1.Location = new System.Drawing.Point(549, 36);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 2;
-            this.tabControl1.Size = new System.Drawing.Size(742, 482);
+            this.tabControl1.Size = new System.Drawing.Size(1113, 727);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.axMapControl2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(734, 456);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1105, 695);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "数据视图";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -500,22 +507,34 @@ namespace WindowsFormsMap1
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.axPageLayoutControl1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(734, 456);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1105, 691);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "布局视图";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // axPageLayoutControl1
+            // 
+            this.axPageLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axPageLayoutControl1.Location = new System.Drawing.Point(4, 4);
+            this.axPageLayoutControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.axPageLayoutControl1.Name = "axPageLayoutControl1";
+            this.axPageLayoutControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPageLayoutControl1.OcxState")));
+            this.axPageLayoutControl1.Size = new System.Drawing.Size(1097, 683);
+            this.axPageLayoutControl1.TabIndex = 0;
             // 
             // tabPageVisual
             // 
             this.tabPageVisual.Controls.Add(this.panelVisualHeader);
             this.tabPageVisual.Controls.Add(this.axMapControlVisual);
-            this.tabPageVisual.Location = new System.Drawing.Point(4, 22);
+            this.tabPageVisual.Location = new System.Drawing.Point(4, 28);
+            this.tabPageVisual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPageVisual.Name = "tabPageVisual";
-            this.tabPageVisual.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVisual.Size = new System.Drawing.Size(734, 456);
+            this.tabPageVisual.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageVisual.Size = new System.Drawing.Size(1105, 691);
             this.tabPageVisual.TabIndex = 2;
             this.tabPageVisual.Text = "可视化演示";
             this.tabPageVisual.UseVisualStyleBackColor = true;
@@ -532,112 +551,114 @@ namespace WindowsFormsMap1
             this.panelVisualHeader.Controls.Add(this.btnVisualSearch);
             this.panelVisualHeader.Controls.Add(this.txtVisualSearch);
             this.panelVisualHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVisualHeader.Location = new System.Drawing.Point(3, 3);
+            this.panelVisualHeader.Location = new System.Drawing.Point(4, 4);
+            this.panelVisualHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelVisualHeader.Name = "panelVisualHeader";
-            this.panelVisualHeader.Size = new System.Drawing.Size(728, 45);
+            this.panelVisualHeader.Size = new System.Drawing.Size(1097, 68);
             this.panelVisualHeader.TabIndex = 1;
             // 
             // btnVisualSync
             // 
-            this.btnVisualSync.Location = new System.Drawing.Point(520, 10);
+            this.btnVisualSync.Location = new System.Drawing.Point(780, 15);
+            this.btnVisualSync.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVisualSync.Name = "btnVisualSync";
-            this.btnVisualSync.Size = new System.Drawing.Size(75, 25);
+            this.btnVisualSync.Size = new System.Drawing.Size(112, 38);
             this.btnVisualSync.TabIndex = 7;
             this.btnVisualSync.Text = "同步数据";
             this.btnVisualSync.UseVisualStyleBackColor = true;
             this.btnVisualSync.Click += new System.EventHandler(this.BtnVisualSync_Click);
             // 
-            // btnVisualPan
-            // 
-            this.btnVisualPan.Location = new System.Drawing.Point(300, 10);
-            this.btnVisualPan.Name = "btnVisualPan";
-            this.btnVisualPan.Size = new System.Drawing.Size(50, 25);
-            this.btnVisualPan.TabIndex = 3;
-            this.btnVisualPan.Text = "漫游";
-            this.btnVisualPan.UseVisualStyleBackColor = true;
-            this.btnVisualPan.Click += new System.EventHandler(this.BtnVisualPan_Click);
-            // 
-            // btnVisualZoomIn
-            // 
-            this.btnVisualZoomIn.Location = new System.Drawing.Point(355, 10);
-            this.btnVisualZoomIn.Name = "btnVisualZoomIn";
-            this.btnVisualZoomIn.Size = new System.Drawing.Size(50, 25);
-            this.btnVisualZoomIn.TabIndex = 4;
-            this.btnVisualZoomIn.Text = "放大";
-            this.btnVisualZoomIn.UseVisualStyleBackColor = true;
-            this.btnVisualZoomIn.Click += new System.EventHandler(this.BtnVisualZoomIn_Click);
-            // 
-            // btnVisualZoomOut
-            // 
-            this.btnVisualZoomOut.Location = new System.Drawing.Point(410, 10);
-            this.btnVisualZoomOut.Name = "btnVisualZoomOut";
-            this.btnVisualZoomOut.Size = new System.Drawing.Size(50, 25);
-            this.btnVisualZoomOut.TabIndex = 5;
-            this.btnVisualZoomOut.Text = "缩小";
-            this.btnVisualZoomOut.UseVisualStyleBackColor = true;
-            this.btnVisualZoomOut.Click += new System.EventHandler(this.BtnVisualZoomOut_Click);
-            // 
             // btnVisualFull
             // 
-            this.btnVisualFull.Location = new System.Drawing.Point(465, 10);
+            this.btnVisualFull.Location = new System.Drawing.Point(698, 15);
+            this.btnVisualFull.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVisualFull.Name = "btnVisualFull";
-            this.btnVisualFull.Size = new System.Drawing.Size(50, 25);
+            this.btnVisualFull.Size = new System.Drawing.Size(75, 38);
             this.btnVisualFull.TabIndex = 6;
             this.btnVisualFull.Text = "全图";
             this.btnVisualFull.UseVisualStyleBackColor = true;
             this.btnVisualFull.Click += new System.EventHandler(this.BtnVisualFull_Click);
             // 
-            // txtVisualSearch
+            // btnVisualZoomOut
             // 
-            this.txtVisualSearch.Location = new System.Drawing.Point(12, 12);
-            this.txtVisualSearch.Name = "txtVisualSearch";
-            this.txtVisualSearch.Size = new System.Drawing.Size(200, 21);
-            this.txtVisualSearch.TabIndex = 0;
+            this.btnVisualZoomOut.Location = new System.Drawing.Point(615, 15);
+            this.btnVisualZoomOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVisualZoomOut.Name = "btnVisualZoomOut";
+            this.btnVisualZoomOut.Size = new System.Drawing.Size(75, 38);
+            this.btnVisualZoomOut.TabIndex = 5;
+            this.btnVisualZoomOut.Text = "缩小";
+            this.btnVisualZoomOut.UseVisualStyleBackColor = true;
+            this.btnVisualZoomOut.Click += new System.EventHandler(this.BtnVisualZoomOut_Click);
             // 
-            // btnVisualSearch
+            // btnVisualZoomIn
             // 
-            this.btnVisualSearch.Location = new System.Drawing.Point(218, 10);
-            this.btnVisualSearch.Name = "btnVisualSearch";
-            this.btnVisualSearch.Size = new System.Drawing.Size(75, 25);
-            this.btnVisualSearch.TabIndex = 1;
-            this.btnVisualSearch.Text = "查找非遗";
-            this.btnVisualSearch.UseVisualStyleBackColor = true;
-            this.btnVisualSearch.Click += new System.EventHandler(this.BtnVisualSearch_Click);
+            this.btnVisualZoomIn.Location = new System.Drawing.Point(532, 15);
+            this.btnVisualZoomIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVisualZoomIn.Name = "btnVisualZoomIn";
+            this.btnVisualZoomIn.Size = new System.Drawing.Size(75, 38);
+            this.btnVisualZoomIn.TabIndex = 4;
+            this.btnVisualZoomIn.Text = "放大";
+            this.btnVisualZoomIn.UseVisualStyleBackColor = true;
+            this.btnVisualZoomIn.Click += new System.EventHandler(this.BtnVisualZoomIn_Click);
+            // 
+            // btnVisualPan
+            // 
+            this.btnVisualPan.Location = new System.Drawing.Point(450, 15);
+            this.btnVisualPan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVisualPan.Name = "btnVisualPan";
+            this.btnVisualPan.Size = new System.Drawing.Size(75, 38);
+            this.btnVisualPan.TabIndex = 3;
+            this.btnVisualPan.Text = "漫游";
+            this.btnVisualPan.UseVisualStyleBackColor = true;
+            this.btnVisualPan.Click += new System.EventHandler(this.BtnVisualPan_Click);
             // 
             // btnBackToPro
             // 
             this.btnBackToPro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBackToPro.Location = new System.Drawing.Point(620, 10);
+            this.btnBackToPro.Location = new System.Drawing.Point(935, 15);
+            this.btnBackToPro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBackToPro.Name = "btnBackToPro";
-            this.btnBackToPro.Size = new System.Drawing.Size(100, 25);
+            this.btnBackToPro.Size = new System.Drawing.Size(150, 38);
             this.btnBackToPro.TabIndex = 2;
             this.btnBackToPro.Text = "返回专业模式";
             this.btnBackToPro.UseVisualStyleBackColor = true;
             this.btnBackToPro.Click += new System.EventHandler(this.BtnBackToPro_Click);
             // 
+            // btnVisualSearch
+            // 
+            this.btnVisualSearch.Location = new System.Drawing.Point(327, 15);
+            this.btnVisualSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVisualSearch.Name = "btnVisualSearch";
+            this.btnVisualSearch.Size = new System.Drawing.Size(112, 38);
+            this.btnVisualSearch.TabIndex = 1;
+            this.btnVisualSearch.Text = "查找非遗";
+            this.btnVisualSearch.UseVisualStyleBackColor = true;
+            this.btnVisualSearch.Click += new System.EventHandler(this.BtnVisualSearch_Click);
+            // 
+            // txtVisualSearch
+            // 
+            this.txtVisualSearch.Location = new System.Drawing.Point(18, 18);
+            this.txtVisualSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVisualSearch.Name = "txtVisualSearch";
+            this.txtVisualSearch.Size = new System.Drawing.Size(298, 28);
+            this.txtVisualSearch.TabIndex = 0;
+            // 
             // axMapControlVisual
             // 
             this.axMapControlVisual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axMapControlVisual.Location = new System.Drawing.Point(3, 48);
+            this.axMapControlVisual.Location = new System.Drawing.Point(4, 4);
+            this.axMapControlVisual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axMapControlVisual.Name = "axMapControlVisual";
-            this.axMapControlVisual.OcxState = null;
-            this.axMapControlVisual.Size = new System.Drawing.Size(728, 405);
+            this.axMapControlVisual.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControlVisual.OcxState")));
+            this.axMapControlVisual.Size = new System.Drawing.Size(1097, 683);
             this.axMapControlVisual.TabIndex = 0;
             this.axMapControlVisual.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.AxMapControlVisual_OnMouseDown);
-            // 
-            // axPageLayoutControl1
-            // 
-            this.axPageLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axPageLayoutControl1.Location = new System.Drawing.Point(3, 3);
-            this.axPageLayoutControl1.Name = "axPageLayoutControl1";
-            this.axPageLayoutControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPageLayoutControl1.OcxState")));
-            this.axPageLayoutControl1.Size = new System.Drawing.Size(728, 450);
-            this.axPageLayoutControl1.TabIndex = 0;
             // 
             // axLicenseControl1
             // 
             this.axLicenseControl1.Enabled = true;
             this.axLicenseControl1.Location = new System.Drawing.Point(239, 84);
+            this.axLicenseControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axLicenseControl1.Name = "axLicenseControl1";
             this.axLicenseControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl1.OcxState")));
             this.axLicenseControl1.Size = new System.Drawing.Size(32, 32);
@@ -645,9 +666,9 @@ namespace WindowsFormsMap1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 529);
+            this.ClientSize = new System.Drawing.Size(1662, 794);
             this.Controls.Add(this.axLicenseControl1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.axLicenseControl3);
@@ -657,7 +678,6 @@ namespace WindowsFormsMap1
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -670,30 +690,16 @@ namespace WindowsFormsMap1
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl3)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            // 
-            // itemSymbolize
-            // 
-            this.itemSymbolize.Name = "itemSymbolize";
-            this.itemSymbolize.Size = new System.Drawing.Size(173, 22);
-            this.itemSymbolize.Text = "符号化";
-            this.itemSymbolize.Click += new System.EventHandler(this.ItemSymbolize_Click);
-            // 
-            // itemExport
-            // 
-            this.itemExport.Name = "itemExport";
-            this.itemExport.Size = new System.Drawing.Size(173, 22);
-            this.itemExport.Text = "导出地图";
-            this.itemExport.Click += new System.EventHandler(this.ItemExport_Click);
-
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axPageLayoutControl1)).EndInit();
             this.tabPageVisual.ResumeLayout(false);
             this.panelVisualHeader.ResumeLayout(false);
             this.panelVisualHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axPageLayoutControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axMapControlVisual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
